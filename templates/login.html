@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+   <form action="" method="post" accept-charset="utf-8">
+   	
+   <div class="jumbotron text-center">
+   	 {% csrf_token %}
+     {{form.as_p}}
+      <button type="submit" class="btn btn-secondary">login</button>
+   </div>
+   
+   </form>
+{% endblock navbar %}

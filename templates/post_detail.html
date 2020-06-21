@@ -1,0 +1,22 @@
+
+
+
+{% block navbar %}
+    
+<h1> Post Detail </h1>
+	
+<h1>{{posts.title}}</h1>
+<br>
+<hr>
+<h3>content</h3>
+
+<p>{{posts.body}}</p>
+
+
+{% load comment_tags %}
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+{% include_static %}
+{% include_bootstrap %}   
+{% render_comments posts request comments_per_page=5 %}
+
+{% endblock navbar %}
